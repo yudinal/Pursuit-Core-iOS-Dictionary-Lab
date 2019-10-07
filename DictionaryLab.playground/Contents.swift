@@ -123,7 +123,7 @@ var highestScoringName = ""
 
 // Your code here
 
-//assert(highestScoringName == "Garry McKenzie", "Was expecting Garry McKenzie, but got \(highestScoringName)")
+//assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, but got \(highestScoringName)")
 
 // Question Five
 
