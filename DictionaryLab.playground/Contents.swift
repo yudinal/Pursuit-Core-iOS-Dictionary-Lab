@@ -12,7 +12,7 @@ var applesDict: [String: Int] = ["Adam": 3,
 
 // a. Set eveAppleCount equal to the number of apples that Eve has
 
-let eveAppleCount: Int = /*Your code here */ -1
+let eveAppleCount: Int = /*Your code here (Replace -1 with your solution)*/ -1
 //assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
 
 // b. Change the number of apples that Adam  has to 4
@@ -22,7 +22,7 @@ let eveAppleCount: Int = /*Your code here */ -1
 
 // c. Set calAndDanAppleCount equal to the sum of both of those
 
-let calAndDanAppleCount = /*Your code here */ -1
+let calAndDanAppleCount = /*Your code here (Replace -1 with your solution)*/ -1
 //assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
 
 // d. Set all the values in applesDict to 0
@@ -41,7 +41,7 @@ var citiesDict: [String: String] = ["Afghanistan": "Kabul",
 
 // a. Set russiaCapital equal to Russia's capital using citiesDict
 
-let russiaCapital = /* Your code here */ ""
+let russiaCapital = /* Your code here (Replace "" with your solution)*/ ""
 //assert(russiaCapital == "Moscow", "Was expecting Moscow, but got \(russiaCapital)")
     
 // b. Add a new key value pair "Jamaica" and its capital "Kingston"
