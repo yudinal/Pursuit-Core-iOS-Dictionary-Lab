@@ -150,8 +150,8 @@ var cubeDict: [Int: Int] = [:]
 
 var frequencyDict: [Character: Int] = [:]
 
-// Your code here
+var mostFrequentChar: Character = "?"
 
-let mostFrequentChar: Character = "?"
+// Your code here
 
 //assert(mostFrequentChar == "e", "Was expecting e, but got \(mostFrequentChar)")
