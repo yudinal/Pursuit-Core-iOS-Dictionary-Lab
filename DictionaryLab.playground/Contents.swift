@@ -131,20 +131,30 @@ var peopleWithScores: [[String: String]] = [
     [
         "firstName": "Noel",
         "lastName": "Bowen",
-        "score": "16"
+        "score": "16" // 16
     ]
 ]
 
-var highestScoringName = "_"
-    switch peopleWithScores {
-    case [_, _, "23"]:
-    print(highestScoringName)
-    default:
-        print("Not the highest")
+var highestScore = 0
+var highestScoringName = ""
+for x in peopleWithScores {
+    let scoreAsString = x["score"] ?? "0"
+    let scoreAsInt = Int(scoreAsString) ?? 0
+    if scoreAsInt > highestScore {
+        highestScore = scoreAsInt
+        let firstName = x["firstName"] ?? ""
+        let lastName = x["lastName"] ?? ""
+        highestScoringName = firstName + " " + lastName
+    }
 }
+print(highestScoringName)
+
+
+
+  
 // Your code here
 
-//assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, but got \(highestScoringName)")
+assert(highestScoringName == "Garry Mckenzie", "Was expecting Garry Mckenzie, but got \(highestScoringName)")
 
 // Question Five
 
@@ -154,13 +164,21 @@ var highestScoringName = "_"
 var cubeDict: [Int: Int] = [:]
 
 // Your code here
+var arrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-//assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
-//assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
-//assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
-//assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
-//assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
-//assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
+for number in arrayOfNumbers {
+   cubeDict[number] = number * number * number
+}
+
+print(cubeDict.values.sorted())
+
+
+assert(cubeDict.count == 20, "Was expecting 20, but got \(cubeDict.count)")
+assert(cubeDict[1] == 1, "Was expecting 1, but got \(String(describing: cubeDict[1]))")
+assert(cubeDict[2] == 8, "Was expecting 8, but got \(String(describing: cubeDict[2]))")
+assert(cubeDict[3] == 27, "Was expecting 27, but got \(String(describing: cubeDict[3]))")
+assert(cubeDict[14] == 2744, "Was expecting 2744, but got \(String(describing: cubeDict[14]))")
+assert(cubeDict[20] == 8000, "Was expecting 8000, but got \(String(describing: cubeDict[20]))")
 
 
 // Question Six
@@ -173,6 +191,26 @@ var frequencyDict: [Character: Int] = [:]
 
 var mostFrequentChar: Character = "?"
 
+var highestCount = 0
+
 // Your code here
 
-//assert(mostFrequentChar == "e", "Was expecting e, but got \(mostFrequentChar)")
+
+
+for char in myString.lowercased() {
+    if char != " " {
+        if frequencyDict[char] == nil {
+            frequencyDict[char] = 1
+        } else {
+            frequencyDict[char] = (frequencyDict[char] ?? 0) + 1
+        }
+    }
+}
+
+for (char, num) in frequencyDict {
+    if num > highestCount {
+        highestCount = num
+        mostFrequentChar = char
+    }
+}
+assert(mostFrequentChar == "e", "Was expecting e, but got \(mostFrequentChar)")
